@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_color_picker"
+            android:icon="@drawable/ic__menu_colorize"
+            android:title="@string/menu_color_picker" />
+
+        <!--<item-->
+            <!--android:id="@+id/nav_(name)"-->
+            <!--android:icon="@drawable/ic_menu_(name)"-->
+            <!--android:title="@string/menu_(name)" />-->
+
+    </group>
+
+    <item android:title="Informações">
+        <menu>
+            <item
+                android:id="@+id/nav_color_add"
+                android:icon="@drawable/ic_menu_color_add"
+                android:title="@string/menu_color_add" />
+        </menu>
+    </item>
+
+</menu>

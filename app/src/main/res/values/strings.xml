@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Color You</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">coloryou@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_color_picker">Color Picker</string>
+    <string name="menu_color_add">Color Add</string>
+    <string name="info_color_add">O ColorADD é uma linguagem única, universal, inclusiva e não discriminatória que permite que os daltônicos identifiquem cores, com um amplo espectro infinito de uso em empresas / entidades sempre que a cor é um fator de identificação, orientação ou escolha.</string>
+</resources>
