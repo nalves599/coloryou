@@ -114,6 +114,9 @@ public class MainActivity extends AppCompatActivity
             case (R.id.nav_teachers_info):
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new TeachersInformationFragment(), FragmentsEnum.TEACHERS_INFO_FRAGMENT.getValor()).commit();
+                break;case (R.id.nav_color_blind):
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ColorBlindFragment(), FragmentsEnum.COLOR_BLIND_FRAGMENT.getValor()).commit();
                 break;
         }
 

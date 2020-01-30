@@ -28,12 +28,17 @@
 
     </group>
 
-    <item android:title="Informações">
+    <item android:title="Informations">
         <menu>
             <item
                 android:id="@+id/nav_color_add"
                 android:icon="@drawable/ic_menu_color_add"
                 android:title="@string/menu_color_add" />
+
+            <item
+                android:id="@+id/nav_color_blind"
+                android:icon="@drawable/ic_menu_color_blind"
+                android:title="@string/menu_color_blind" />
 
             <item
                 android:id="@+id/nav_fathers_info"
