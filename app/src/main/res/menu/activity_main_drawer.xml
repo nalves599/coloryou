@@ -39,6 +39,11 @@
                 android:id="@+id/nav_fathers_info"
                 android:icon="@drawable/ic_menu_people"
                 android:title="@string/menu_fathers" />
+
+            <item
+                android:id="@+id/nav_teachers_info"
+                android:icon="@drawable/ic_menu_school"
+                android:title="@string/menu_teachers" />
         </menu>
     </item>
 

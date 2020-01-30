@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/info_horizontal_padding"
+            android:layout_marginTop="@dimen/info_vertical_margin"
+            android:layout_marginRight="@dimen/info_horizontal_padding"
+            android:layout_marginBottom="@dimen/info_vertical_margin"
+            android:paddingBottom="40dp"
+            android:divider="@drawable/divider_vertical"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Informações - Professores"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Sinais que podem mostrar que alguém pode ser daltónico. "
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Uso inadequado da cor: geralmente pintam os céus roxos, os rostos amarelos, verdes, cinzentos, as folhas vermelhas, a relva castanha. "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Resistência ou oposição em ajudar na hora de arrumar se as caixas são codificadas por cores."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Negação de problemas de cor."
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/image1"
+                android:src="@mipmap/pedagogia"
+                android:layout_height="260dp"
+                android:layout_width="match_parent" />
+
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Comportamento disruptivo, falta de vontade, incapacidade de jogar jogos de tabuleiro, de correspondência e até alguns jogos de memória."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• A identificação da cor pode ser agravada pela luz de baixo nível em pequenas áreas de cor."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Ao copiar por outras crianças as cores de um desenho esta pode ficar parada a assistir para que possa pedir emprestado uma cor a um amigo depois de ele a usar, copiando sempre exatamente a mesma cor."
+                android:textSize="16sp" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().remove(fragment).commit();
             fragment = getSupportFragmentManager().findFragmentByTag(FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor());
             getSupportFragmentManager().beginTransaction().show(fragment).commit();
-        }else {
+        } else {
             super.onBackPressed();
         }
     }
@@ -111,6 +111,10 @@ public class MainActivity extends AppCompatActivity
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new FathersInformationFragment(), FragmentsEnum.FATHERS_INFO_FRAGMENT.getValor()).commit();
                 break;
+            case (R.id.nav_teachers_info):
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new TeachersInformationFragment(), FragmentsEnum.TEACHERS_INFO_FRAGMENT.getValor()).commit();
+                break;
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -123,7 +127,7 @@ public class MainActivity extends AppCompatActivity
     public Fragment getVisibleFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         List<Fragment> fragments = fragmentManager.getFragments();
-        if(fragments != null) {
+        if (fragments != null) {
             for (Fragment fragment : fragments) {
                 if (fragment != null && fragment.isVisible())
                     return fragment;
