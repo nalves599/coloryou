@@ -15,6 +15,12 @@ import android.view.MenuItem;
 import java.util.List;
 
 import pt.coloryou.enums.FragmentsEnum;
+import pt.coloryou.fragments.CameraFragment;
+import pt.coloryou.fragments.informations.ColorAddFragment;
+import pt.coloryou.fragments.informations.ColorBlindFragment;
+import pt.coloryou.fragments.informations.FathersInformationFragment;
+import pt.coloryou.fragments.informations.TeachersInformationFragment;
+import pt.coloryou.fragments.TestsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

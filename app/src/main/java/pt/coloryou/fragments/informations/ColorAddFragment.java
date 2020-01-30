@@ -1,4 +1,4 @@
-package pt.coloryou;
+package pt.coloryou.fragments.informations;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ColorBlindFragment extends Fragment {
+import pt.coloryou.R;
+
+public class ColorAddFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.color_blind_fragment, container, false);
+        View view = inflater.inflate(R.layout.color_add_fragment, container, false);
 
         return view;
     }

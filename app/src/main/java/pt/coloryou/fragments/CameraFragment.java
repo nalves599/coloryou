@@ -1,4 +1,4 @@
-package pt.coloryou;
+package pt.coloryou.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -30,6 +30,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import pt.coloryou.R;
 import pt.coloryou.enums.ErrorEnum;
 import pt.coloryou.enums.FragmentsEnum;
 

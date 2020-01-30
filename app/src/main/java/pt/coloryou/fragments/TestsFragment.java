@@ -1,4 +1,4 @@
-package pt.coloryou;
+package pt.coloryou.fragments;
 
 import android.content.res.AssetManager;
 import android.os.Bundle;
@@ -23,6 +23,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import pt.coloryou.R;
 import pt.coloryou.models.AnswerModel;
 import pt.coloryou.models.TesteModel;
 

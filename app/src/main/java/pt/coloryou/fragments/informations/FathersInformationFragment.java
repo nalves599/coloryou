@@ -1,4 +1,4 @@
-package pt.coloryou;
+package pt.coloryou.fragments.informations;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TeachersInformationFragment extends Fragment {
+import pt.coloryou.R;
+
+public class FathersInformationFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.teachers_information_fragment, container, false);
+        View view = inflater.inflate(R.layout.fathers_information_fragment, container, false);
 
         return view;
     }
