@@ -103,6 +103,14 @@ public class MainActivity extends AppCompatActivity
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ColorAddFragment(), FragmentsEnum.COLOR_ADD_FRAGMENT.getValor()).commit();
                 break;
+            case (R.id.nav_tests):
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new TestsFragment(), FragmentsEnum.TESTS_FRAGMENT.getValor()).commit();
+                break;
+            case (R.id.nav_fathers_info):
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new FathersInformationFragment(), FragmentsEnum.FATHERS_INFO_FRAGMENT.getValor()).commit();
+                break;
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

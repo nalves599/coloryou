@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testes>
+    <teste>
+        <question>Qual a sua idade?</question>
+        <answers>
+            <answer correct="true">17</answer>
+            <answer correct="false">13</answer>
+            <answer correct="false">20</answer>
+        </answers>
+    </teste>
+</testes>

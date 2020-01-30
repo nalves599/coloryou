@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/info_horizontal_padding"
+            android:layout_marginTop="@dimen/info_vertical_margin"
+            android:layout_marginRight="@dimen/info_horizontal_padding"
+            android:layout_marginBottom="@dimen/info_vertical_margin"
+            android:paddingBottom="40dp"
+            android:divider="@drawable/divider_vertical"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informações - Pais"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Sinais que podem mostrar que alguém pode ser daltónico. "
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Utilização de cores erradas para um objeto, por exemplo, folhas roxas nas árvores. "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Pouca atenção ao colorir em folhas de trabalho. "
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Negação de problemas de cor."
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:src="@mipmap/family"
+                android:id="@+id/image1"
+                android:layout_height="260dp"
+                android:layout_width="match_parent" />
+
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Problemas na identificação de lápis de cor vermelha ou verde ou qualquer lápis de cor com vermelho ou verde na sua composição."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• A identificação da cor pode ser agravada pela luz de baixo nível em pequenas áreas de cor."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Cheirar a comida antes de comer."
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Sensibilidade a luzes brilhantes."
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="• Problemas de leitura com páginas coloridas ou folhas de trabalho produzidas com sobreposição de cores."
+                android:textSize="16sp" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -15,6 +15,7 @@
             android:layout_marginTop="@dimen/info_vertical_margin"
             android:layout_marginRight="@dimen/info_horizontal_padding"
             android:layout_marginBottom="@dimen/info_vertical_margin"
+            android:paddingBottom="40dp"
             android:divider="@drawable/divider_vertical"
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -34,7 +35,7 @@
 
             <TextView
                 android:id="@+id/text1"
-                android:layout_width="293dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:text="O ColorADD é uma linguagem universal criada especificamente para ajudar com a identificação de cores, especificamente usado quando o fator de identificação, orientação ou escolha é necessário."
@@ -43,7 +44,7 @@
 
             <TextView
                 android:id="@+id/text2"
-                android:layout_width="293dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:text="O “código” do ColorADD é baseado em 3 símbolos, as três cores primárias, em que cada uma tem o seu simbolo, e usado as combinações dos símbolos tem-se o resto das cores."
@@ -117,7 +118,7 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="60dp">
+                >
 
                 <LinearLayout
                     android:layout_width="wrap_content"

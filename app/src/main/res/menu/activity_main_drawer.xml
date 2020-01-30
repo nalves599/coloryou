@@ -10,8 +10,16 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_color_picker"
-            android:icon="@drawable/ic__menu_colorize"
+            android:icon="@drawable/ic_menu_colorize"
             android:title="@string/menu_color_picker" />
+
+        <item
+            android:id="@+id/nav_tests"
+            android:icon="@drawable/ic_menu_tests"
+            android:title="@string/menu_tests" />
+
+
+
 
         <!--<item-->
             <!--android:id="@+id/nav_(name)"-->
@@ -26,6 +34,11 @@
                 android:id="@+id/nav_color_add"
                 android:icon="@drawable/ic_menu_color_add"
                 android:title="@string/menu_color_add" />
+
+            <item
+                android:id="@+id/nav_fathers_info"
+                android:icon="@drawable/ic_menu_people"
+                android:title="@string/menu_fathers" />
         </menu>
     </item>
 
