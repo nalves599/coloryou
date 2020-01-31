@@ -8,5 +8,7 @@
     <dimen name="info_vertical_margin">30dp</dimen>
     <dimen name="info_horizontal_padding">40dp</dimen>
     <dimen name="divider">20dp</dimen>
+    <dimen name="divider_points">10dp</dimen>
+    <dimen name="point_size">20dp</dimen>
     <dimen name="color_picker_toolbar">80dp</dimen>
 </resources>

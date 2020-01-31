@@ -1,27 +1,23 @@
 package pt.coloryou.fragments;
 
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Xml;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.UUID;
 
 import pt.coloryou.R;
 import pt.coloryou.models.AnswerModel;
@@ -38,17 +34,22 @@ public class TestsFragment extends Fragment {
 
         parseXML();
 
-        createTestes(view,inflater);
+        createTestes(view);
 
         return view;
     }
 
-    private void createTestes(View view,LayoutInflater inflater) {
+    private void createTestes(View view) {
 
-        LinearLayout options_layout = (LinearLayout) view.findViewById(R.id.points);
-        for (TesteModel testeModel : testes) {
+        LinearLayout options_layout = view.findViewById(R.id.points);
+        for (int i = 0; i < testes.size(); i++) {
+            String uniqueID = UUID.randomUUID().toString();
+            testes.get(i).id = uniqueID;
             ImageView point = new ImageView(getContext());
+            point.getLayoutParams().height = (int) (getContext().getResources().getDimension(R.dimen.point_size));
+            point.getLayoutParams().width = (int) (getContext().getResources().getDimension(R.dimen.point_size));
             point.setImageResource(R.drawable.ic_circle_grey);
+            point.setId(Integer.parseInt(uniqueID));
             options_layout.addView(point);
         }
 
