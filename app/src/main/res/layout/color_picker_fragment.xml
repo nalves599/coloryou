@@ -13,7 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/smile"
+        android:src="@drawable/color_picker_default_image"
         android:scaleType="fitCenter"/>
 
     <LinearLayout
