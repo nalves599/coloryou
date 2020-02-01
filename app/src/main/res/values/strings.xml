@@ -15,4 +15,10 @@
     <string name="menu_color_add">Color Add</string>
     <string name="menu_color_blind">Color Blind</string>
     <string name="info_color_add">O ColorADD é uma linguagem única, universal, inclusiva e não discriminatória que permite que os daltônicos identifiquem cores, com um amplo espectro infinito de uso em empresas / entidades sempre que a cor é um fator de identificação, orientação ou escolha.</string>
+    <string name="sair_title">Sair dos Testes</string>
+    <string name="sair">sair</string>
+    <string name="continuar">continuar</string>
+    <string name="sair_texto">Tem a certeza que deseja sair?</string>
+
+    <integer name="number_of_tests">3</integer>
 </resources>

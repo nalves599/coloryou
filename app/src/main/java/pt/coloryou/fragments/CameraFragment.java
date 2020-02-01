@@ -110,7 +110,7 @@ public class CameraFragment extends Fragment {
                 Fragment colorFragment = new ColorFragment();
                 colorFragment.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction().hide(getActivity().getSupportFragmentManager().findFragmentByTag(FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor())).commit();
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, colorFragment,"COLOR_FRAGMENT").commit();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, colorFragment,FragmentsEnum.COLOR_FRAGMENT.getValor()).commit();
             }
         });
 

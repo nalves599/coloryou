@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+ Para criar um teste novo:
+ - Question - Id do drawable que contém a imagem do teste
+ - Answer - Adicionar o valor da resposta, e adicionar o campo correct
+              com o valor de "true", à resposta certa
+-->
 <testes>
     <teste>
-        <question>Qual a sua idade?</question>
+        <question>number42</question>
         <answers>
-            <answer correct="true">17</answer>
-            <answer correct="false">13</answer>
-            <answer correct="false">20</answer>
+            <answer correct="true">42</answer>
+            <answer>54</answer>
+            <answer>48</answer>
+            <answer>98</answer>
+            <answer>92</answer>
         </answers>
     </teste>
+    <teste>
+        <question>number6</question>
+        <answers>
+            <answer correct="true">6</answer>
+            <answer>9</answer>
+            <answer>16</answer>
+            <answer>4</answer>
+            <answer>61</answer>
+            <answer>96</answer>
+        </answers>
+    </teste>
+    <teste>
+    <question>number74</question>
+    <answers>
+        <answer correct="true">74</answer>
+        <answer>14</answer>
+        <answer>26</answer>
+        <answer>18</answer>
+        <answer>36</answer>
+    </answers>
+</teste>
 </testes>

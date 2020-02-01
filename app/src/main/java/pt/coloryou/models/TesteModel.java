@@ -6,7 +6,7 @@ import java.util.List;
 public class TesteModel {
 
     public String question;
-    public String id;
+    public String status = "";
     public List<AnswerModel> answers = new ArrayList<>();
 
 }
