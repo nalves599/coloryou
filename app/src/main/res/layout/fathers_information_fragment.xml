@@ -73,7 +73,7 @@
 
 
             <ImageView
-                android:src="@mipmap/family"
+                android:src="@drawable/familia"
                 android:id="@+id/image1"
                 android:layout_height="260dp"
                 android:layout_width="match_parent" />

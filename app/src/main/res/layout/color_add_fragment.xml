@@ -80,7 +80,7 @@
                 android:id="@+id/image1"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
-                android:src="@mipmap/symbols_coloradd_foreground" />
+                android:src="@drawable/aa" />
 
 
             <TextView
@@ -103,7 +103,7 @@
                     android:layout_height="150dp"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:src="@mipmap/color_add_white_foreground" />
+                    android:src="@drawable/a" />
 
 
                 <ImageView
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    android:src="@mipmap/color_add_color_foreground" />
+                    android:src="@drawable/b" />
             </LinearLayout>
 
 
@@ -138,7 +138,7 @@
                             android:id="@+id/image4"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:src="@mipmap/cores_primarias_foreground" />
+                            android:src="@drawable/e" />
 
                         <TextView
                             android:id="@+id/text6"
@@ -162,7 +162,7 @@
                             android:id="@+id/image5"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:src="@mipmap/neutras_foreground" />
+                            android:src="@drawable/c" />
 
                         <TextView
                             android:id="@+id/text7"
@@ -185,7 +185,7 @@
                             android:id="@+id/image6"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:src="@mipmap/outras_cores_foreground" />
+                            android:src="@drawable/d" />
 
                         <TextView
                             android:id="@+id/text8"
