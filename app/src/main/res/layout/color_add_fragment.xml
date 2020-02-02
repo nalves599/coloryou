@@ -80,7 +80,7 @@
                 android:id="@+id/image1"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
-                android:src="@drawable/aa" />
+                android:src="@drawable/color_add_three_colors" />
 
 
             <TextView
@@ -103,7 +103,7 @@
                     android:layout_height="150dp"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/a" />
+                    android:src="@drawable/color_add_white" />
 
 
                 <ImageView
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    android:src="@drawable/b" />
+                    android:src="@drawable/color_add_white_background" />
             </LinearLayout>
 
 
@@ -138,7 +138,7 @@
                             android:id="@+id/image4"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:src="@drawable/e" />
+                            android:src="@drawable/color_add_primary_colors" />
 
                         <TextView
                             android:id="@+id/text6"
@@ -162,7 +162,7 @@
                             android:id="@+id/image5"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:src="@drawable/c" />
+                            android:src="@drawable/color_add_black_and_white" />
 
                         <TextView
                             android:id="@+id/text7"
@@ -185,7 +185,7 @@
                             android:id="@+id/image6"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:src="@drawable/d" />
+                            android:src="@drawable/color_add_secondary_colors" />
 
                         <TextView
                             android:id="@+id/text8"

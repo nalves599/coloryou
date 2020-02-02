@@ -119,7 +119,7 @@ public class CameraFragment extends Fragment {
             // Image already set
             if (currentPhotoPath != null) setPic();
             // Color Already Picked
-            if (pickedColor != null) btnColor.setBackgroundColor(Color.parseColor(pickedColor));
+            if (pickedColor != null && !pickedColor.isEmpty()) btnColor.setBackgroundColor(Color.parseColor(pickedColor));
         } else {
             currentPhotoPath = null;
             pickedColor = "";
@@ -170,7 +170,7 @@ public class CameraFragment extends Fragment {
             scaleFactor = 0;
         }
 
-        // Decode the image file into a Bitmap sized to fill the View
+        // Decode the image file into color_add_white Bitmap sized to fill the View
         bmOptions.inJustDecodeBounds = false;
         bmOptions.inSampleSize = scaleFactor;
         bmOptions.inPurgeable = true;
@@ -216,7 +216,7 @@ public class CameraFragment extends Fragment {
 
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
+        // Ensure that there's color_add_white camera activity to handle the intent
         if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
             // Create the File where the photo should go
             File photoFile = null;
@@ -250,7 +250,7 @@ public class CameraFragment extends Fragment {
                 storageDir      /* directory */
         );
 
-        // Save a file: path for use with ACTION_VIEW intents
+        // Save color_add_white file: path for use with ACTION_VIEW intents
         currentPhotoPath = image.getAbsolutePath();
         return image;
     }
