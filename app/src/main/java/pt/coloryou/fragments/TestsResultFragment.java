@@ -45,14 +45,27 @@ public class TestsResultFragment extends Fragment {
 
         testesResults = getArguments().getStringArray("testes_results");
         createPoints(view);
+        setMessages(view);
 
 
         return view;
     }
 
-    private void setText(View view){
+    private void setMessages(View view){
         TextView textView = view.findViewById(R.id.result_text);
+        ImageView imageView = view.findViewById(R.id.result_image);
 
+
+        if(0.70 < ((correct*1.0) / testesResults.length)){
+            textView.setText("Parabéns, conseguiste!");
+             imageView.setImageResource(R.drawable.smile_happy);
+        } else if(0.30 < ((correct*1.0)  / testesResults.length)){
+             imageView.setImageResource(R.drawable.smile_sad);
+            textView.setText("Eu sei que consegues melhor.");
+        } else {
+             imageView.setImageResource(R.drawable.smile_silly);
+            textView.setText("O Color You foi feito para ti.");
+        }
     }
 
     private void createPoints(View view) {
