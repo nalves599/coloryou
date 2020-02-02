@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/question"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"

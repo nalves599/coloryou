@@ -36,5 +36,28 @@
         <answer>18</answer>
         <answer>36</answer>
     </answers>
-</teste>
+    </teste>
+    <teste>
+        <question>number57</question>
+        <answers>
+            <answer correct="true">57</answer>
+            <answer>51</answer>
+            <answer>59</answer>
+            <answer>27</answer>
+            <answer>87</answer>
+            <answer>81</answer>
+            <answer>80</answer>
+        </answers>
+    </teste>
+    <teste>
+        <question>number2</question>
+        <answers>
+            <answer correct="true">2</answer>
+            <answer>1</answer>
+            <answer>20</answer>
+            <answer>8</answer>
+            <answer>0</answer>
+            <answer>4</answer>
+        </answers>
+    </teste>
 </testes>

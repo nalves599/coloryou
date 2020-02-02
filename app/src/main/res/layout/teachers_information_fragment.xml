@@ -74,7 +74,7 @@
 
             <ImageView
                 android:id="@+id/image1"
-                android:src="@mipmap/pedagogia"
+                android:src="@drawable/pedagogia"
                 android:layout_height="260dp"
                 android:layout_width="match_parent" />
 
