@@ -15,10 +15,10 @@
             android:layout_marginTop="@dimen/info_vertical_margin"
             android:layout_marginRight="@dimen/info_horizontal_padding"
             android:layout_marginBottom="@dimen/info_vertical_margin"
-            android:paddingBottom="40dp"
             android:divider="@drawable/divider_vertical"
             android:gravity="center_horizontal"
             android:orientation="vertical"
+            android:paddingBottom="40dp"
             android:showDividers="middle">
 
 
@@ -36,90 +36,86 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <ImageView
-                    android:src="@mipmap/normal_vision"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
                     android:layout_gravity="start"
                     android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"/>
+                    android:src="@mipmap/normal_vision" />
 
                 <TextView
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
                     android:text="Visão normal com a perceção de todas as cores "
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <ImageView
-                    android:src="@mipmap/pronatopia_vision"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"/>
+                    android:src="@mipmap/pronatopia_vision" />
 
                 <TextView
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
                     android:text="É uma forma menos conhecida de Daltonismo.  Todas as tonalidades de verde e vermelho aparecem um pouco desbotadas, enquanto tons de azul e amarelo permanecem praticamente inalterados. "
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <ImageView
-                    android:src="@mipmap/deuteranomalia_vision"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"/>
+                    android:src="@mipmap/deuteranomalia_vision" />
 
                 <TextView
                     android:id="@+id/text1"
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
                     android:text="É a forma mais comum de Daltonismo.  É possível observar na foto que, para essas pessoas, as cores perdem parte do seu brilho, especialmente o verde e o vermelho. "
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <ImageView
-                    android:src="@mipmap/trinatopia_vision"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"/>
+                    android:src="@mipmap/trinatopia_vision" />
 
                 <TextView
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
                     android:text="É uma forma muito rara da doença que afeta homens e mulheres em um grau igualmente pequeno.  Aqueles que a experimentam veem o mundo em tons de rosa e esverdeados. "
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textSize="16sp" />
             </LinearLayout>
 
         </LinearLayout>
