@@ -9,16 +9,20 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_color_picker">Color Picker</string>
-    <string name="menu_tests">Color Blind Tests</string>
-    <string name="menu_fathers">Fathers Information</string>
-    <string name="menu_teachers">Teachers Information</string>
+    <string name="menu_tests">Testes Daltonismo</string>
+    <string name="menu_fathers">Informação Pais</string>
+    <string name="menu_teachers">Informação Professores</string>
     <string name="menu_color_add">Color Add</string>
-    <string name="menu_color_blind">Color Blind</string>
-    <string name="info_color_add">O ColorADD é uma linguagem única, universal, inclusiva e não discriminatória que permite que os daltônicos identifiquem cores, com um amplo espectro infinito de uso em empresas / entidades sempre que a cor é um fator de identificação, orientação ou escolha.</string>
+    <string name="menu_color_blind">Daltonismo</string>
     <string name="sair_title">Sair dos Testes</string>
     <string name="sair">sair</string>
     <string name="continuar">continuar</string>
     <string name="sair_texto">Tem a certeza que deseja sair?</string>
+    <string name="hexadecimal">hex</string>
+    <string name="rgb">rgb</string>
+    <string name="hsl">hsl</string>
+    <string name="cmyk">cmyk</string>
+    <string name="slogan">A app que dá cor à sua vida</string>
 
     <integer name="number_of_tests">5</integer>
 </resources>

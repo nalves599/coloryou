@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/info_horizontal_padding"
+            android:layout_marginTop="@dimen/info_vertical_margin"
+            android:layout_marginRight="@dimen/info_horizontal_padding"
+            android:layout_marginBottom="@dimen/info_vertical_margin"
+            android:divider="@drawable/divider_vertical"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            android:showDividers="middle">
+
+            <!-- Color And Color Names -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- Color -->
+                <ImageView
+                    android:id="@+id/color"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:scaleType="fitCenter" />
+
+                <!-- Color Name-->
+                <TextView
+                    android:id="@+id/primary_color_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Azul"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Full Color Name-->
+                <TextView
+                    android:id="@+id/color_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Azul Marino"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Color Systems -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:divider="@drawable/divider_vertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <!-- HEX -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/hexadecimal"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/hex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- RGB -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/rgb"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/rgb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- HSL -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/hsl"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/hsl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- CMYK -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/cmyk"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cmyk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Color Add Information-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:text="@string/menu_color_add"/>
+                <ImageView
+                    android:id="@+id/color_add"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

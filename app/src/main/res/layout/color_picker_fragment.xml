@@ -38,6 +38,7 @@
             android:layout_weight="1"
             android:background="@null"
             android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
             android:src="@drawable/img_gallery" />
 
         <ImageButton
@@ -51,7 +52,8 @@
             android:layout_weight="1"
             android:background="@null"
             android:scaleType="fitCenter"
-            android:src="@drawable/img_camera_photo" />
+            android:src="@drawable/img_camera"
+            android:tint="@color/colorPrimary"/>
 
         <Button
             android:id="@+id/btn_color"

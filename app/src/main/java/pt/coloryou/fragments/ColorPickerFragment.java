@@ -34,7 +34,7 @@ import pt.coloryou.R;
 import pt.coloryou.enums.ErrorEnum;
 import pt.coloryou.enums.FragmentsEnum;
 
-public class CameraFragment extends Fragment {
+public class ColorPickerFragment extends Fragment {
 
     static final int REQUEST_GET_GALLERY_PHOTO = 1;
     static final int REQUEST_TAKE_PHOTO = 2;
@@ -122,7 +122,7 @@ public class CameraFragment extends Fragment {
             if (pickedColor != null && !pickedColor.isEmpty()) btnColor.setBackgroundColor(Color.parseColor(pickedColor));
         } else {
             currentPhotoPath = null;
-            pickedColor = "";
+            pickedColor = "#ffffff";
         }
 
         return view;
@@ -237,7 +237,6 @@ public class CameraFragment extends Fragment {
         }
     }
 
-    // Set Image Orientation Methods
 
     private File createImageFile() throws IOException {
         // Create an image file name
@@ -255,6 +254,7 @@ public class CameraFragment extends Fragment {
         return image;
     }
 
+    // Set Image Orientation Methods
     private Bitmap orientateImage(String photoPath, Bitmap bitmap) throws Exception {
         ExifInterface ei = new ExifInterface(photoPath);
         int orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION,

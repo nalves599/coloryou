@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import pt.coloryou.enums.FragmentsEnum;
-import pt.coloryou.fragments.CameraFragment;
+import pt.coloryou.fragments.ColorPickerFragment;
 import pt.coloryou.fragments.HomeFragment;
 import pt.coloryou.fragments.TestsFragment;
 import pt.coloryou.fragments.informations.ColorAddFragment;
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
             } else if (fragment.getTag().equals(FragmentsEnum.TESTS_FRAGMENT.getValor())) {
                 showPopupToExit("sair dos testes", null);
             }else if (fragment.getTag().equals(FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor())) {
-                showPopupToExit("sair dos color picker", null);
+                showPopupToExit("sair do color picker", null);
             } else if (fragment.getTag().equals(FragmentsEnum.TESTS_RESULT_FRAGMENT.getValor())) {
                 onNavigationItemSelected(navigationView.getMenu().getItem(0));
             } else {
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity
             case (R.id.nav_color_picker):
                 navigationView.setCheckedItem(R.id.nav_color_picker);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new CameraFragment(), FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor()).commit();
+                        new ColorPickerFragment(), FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor()).commit();
                 //vf.setDisplayedChild(ErrorEnum.CAMERA.getValor());
                 break;
             case (R.id.nav_color_add):
