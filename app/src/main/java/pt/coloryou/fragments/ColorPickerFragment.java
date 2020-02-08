@@ -2,6 +2,8 @@ package pt.coloryou.fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,13 +35,14 @@ import java.util.Date;
 import pt.coloryou.R;
 import pt.coloryou.enums.ErrorEnum;
 import pt.coloryou.enums.FragmentsEnum;
+import pt.coloryou.utils.PermissionsUtil;
 
 public class ColorPickerFragment extends Fragment {
 
     static final int REQUEST_GET_GALLERY_PHOTO = 1;
     static final int REQUEST_TAKE_PHOTO = 2;
     static final int RESULT_OK = -1;
-
+    static ColorPickerFragment colorPickerFragment;
     static String currentPhotoPath;
     static String pickedColor;
 
@@ -89,7 +92,12 @@ public class ColorPickerFragment extends Fragment {
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dispatchTakePictureIntent();
+                int res = PermissionsUtil.askCameraPermissions(colorPickerFragment);
+                if (res == 1) {
+                    dispatchTakePictureIntent();
+                } else if (res == -1) {
+                    Toast.makeText(getContext(), "Color You não tem autorização para utilizar a câmara.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -97,7 +105,11 @@ public class ColorPickerFragment extends Fragment {
         btnGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGallery();
+                int res = PermissionsUtil.askGalleryPermission(colorPickerFragment);
+                if (res == 1)
+                    openGallery();
+                else if (res == -1)
+                    Toast.makeText(getContext(), "Color You não tem autorização para utilizar a galeria.", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -110,21 +122,24 @@ public class ColorPickerFragment extends Fragment {
                 Fragment colorFragment = new ColorFragment();
                 colorFragment.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction().hide(getActivity().getSupportFragmentManager().findFragmentByTag(FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor())).commit();
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, colorFragment,FragmentsEnum.COLOR_FRAGMENT.getValor()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, colorFragment, FragmentsEnum.COLOR_FRAGMENT.getValor()).commit();
             }
         });
 
         // If phone orientation changed
         if (savedInstanceState != null) {
+
             // Image already set
             if (currentPhotoPath != null) setPic();
             // Color Already Picked
-            if (pickedColor != null && !pickedColor.isEmpty()) btnColor.setBackgroundColor(Color.parseColor(pickedColor));
         } else {
             currentPhotoPath = null;
             pickedColor = "#ffffff";
         }
 
+        btnColor.setBackgroundColor(Color.parseColor(pickedColor));
+
+        colorPickerFragment = this;
         return view;
     }
 
@@ -289,4 +304,23 @@ public class ColorPickerFragment extends Fragment {
                 matrix, true);
     }
 
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    dispatchTakePictureIntent();
+                }
+            }
+            break;
+            case 2: {
+                openGallery();
+            }
+            break;
+        }
+    }
 }

@@ -7,7 +7,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Início</string>
     <string name="menu_color_picker">Color Picker</string>
     <string name="menu_tests">Testes Daltonismo</string>
     <string name="menu_fathers">Informação Pais</string>

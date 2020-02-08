@@ -1,6 +1,7 @@
 package pt.coloryou;
 
 import android.app.Dialog;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import pt.coloryou.enums.FragmentsEnum;
 import pt.coloryou.fragments.ColorPickerFragment;
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity
                 getSupportFragmentManager().beginTransaction().show(fragment).commit();
             } else if (fragment.getTag().equals(FragmentsEnum.TESTS_FRAGMENT.getValor())) {
                 showPopupToExit("sair dos testes", null);
-            }else if (fragment.getTag().equals(FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor())) {
+            } else if (fragment.getTag().equals(FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor())) {
                 showPopupToExit("sair do color picker", null);
             } else if (fragment.getTag().equals(FragmentsEnum.TESTS_RESULT_FRAGMENT.getValor())) {
                 onNavigationItemSelected(navigationView.getMenu().getItem(0));
@@ -179,4 +181,10 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+    /* Permissions */
+
+
+
 }
