@@ -31,7 +31,6 @@ public class TestsResultFragment extends Fragment {
 
     private String[] testesResults;
     private int correct;
-    private int wrong;
 
     @Nullable
     @Override
@@ -52,20 +51,23 @@ public class TestsResultFragment extends Fragment {
     }
 
     private void setMessages(View view){
-        TextView textView = view.findViewById(R.id.result_text);
+        TextView resultText = view.findViewById(R.id.result_text);
+        TextView resultTextValue = view.findViewById(R.id.result_text_value);
         ImageView imageView = view.findViewById(R.id.result_image);
 
 
         if(0.70 < ((correct*1.0) / testesResults.length)){
-            textView.setText("Parabéns, conseguiste!");
+            resultText.setText("Parabéns, conseguiste!");
              imageView.setImageResource(R.drawable.smile_happy);
         } else if(0.30 < ((correct*1.0)  / testesResults.length)){
              imageView.setImageResource(R.drawable.smile_sad);
-            textView.setText("Eu sei que consegues melhor.");
+            resultText.setText("Eu sei que consegues melhor.");
         } else {
              imageView.setImageResource(R.drawable.smile_silly);
-            textView.setText("O Color You foi feito para ti.");
+            resultText.setText("O Color You foi feito para ti.");
         }
+
+        resultTextValue.setText(correct + " / " + testesResults.length);
     }
 
     private void createPoints(View view) {
@@ -73,7 +75,6 @@ public class TestsResultFragment extends Fragment {
         LinearLayout options_layout = view.findViewById(R.id.points);
         options_layout.removeAllViews();
         correct = 0;
-        wrong = 0;
         for (int i = 0; i < testesResults.length; i++) {
             ImageView point = new ImageView(getContext());
             float scaleRatio = getResources().getDisplayMetrics().density;
@@ -85,7 +86,6 @@ public class TestsResultFragment extends Fragment {
                 correct++;
                 point.setImageResource(R.drawable.ic_circle_green);
             } else if (testesResults[i].equals("wrong")) {
-                wrong++;
                 point.setImageResource(R.drawable.ic_circle_red);
             } else {
                 point.setImageResource(R.drawable.ic_circle_grey);

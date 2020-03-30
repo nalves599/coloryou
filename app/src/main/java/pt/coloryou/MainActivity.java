@@ -1,10 +1,14 @@
 package pt.coloryou;
 
 import android.app.Dialog;
-import android.content.pm.PackageManager;
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,7 +18,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import pt.coloryou.enums.FragmentsEnum;
 import pt.coloryou.fragments.ColorPickerFragment;
@@ -24,18 +27,24 @@ import pt.coloryou.fragments.informations.ColorAddFragment;
 import pt.coloryou.fragments.informations.ColorBlindFragment;
 import pt.coloryou.fragments.informations.FathersInformationFragment;
 import pt.coloryou.fragments.informations.TeachersInformationFragment;
+import pt.coloryou.utils.NotificationUtil;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Dialog dialog;
     NavigationView navigationView;
+    NotificationManagerCompat notificationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dialog = new Dialog(this);
+
+        // START - Notification Manager
+        notificationManager = NotificationManagerCompat.from(this);
+        // END - Notification Manager
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,7 +60,14 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         // END - Drawer Navigation Config
 
-        if (savedInstanceState == null)
+        String openFragment = getIntent().getStringExtra("openFragment");
+
+        if(openFragment != null){
+            if(openFragment.equals(FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor())) {
+                onNavigationItemSelected(navigationView.getMenu().getItem(1));
+            }
+        }
+        else if (savedInstanceState == null)
             onNavigationItemSelected(navigationView.getMenu().getItem(0));
 
     }
@@ -72,10 +88,10 @@ public class MainActivity extends AppCompatActivity
                 showPopupToExit("sair dos testes", null);
             } else if (fragment.getTag().equals(FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor())) {
                 showPopupToExit("sair do color picker", null);
-            } else if (fragment.getTag().equals(FragmentsEnum.TESTS_RESULT_FRAGMENT.getValor())) {
-                onNavigationItemSelected(navigationView.getMenu().getItem(0));
-            } else {
+            } else if (fragment.getTag().equals(FragmentsEnum.HOME_FRAGMENT.getValor())) {
                 super.onBackPressed();
+            } else {
+                onNavigationItemSelected(navigationView.getMenu().getItem(0));
             }
         } else {
             super.onBackPressed();
@@ -183,8 +199,25 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    /* Permissions */
+    public void sendNotification(View v){
+        String title = "Color You!";
+        String message = "A App que dá cor à tua vida!";
 
+        Intent activityIntent = new Intent(this,MainActivity.class);
+        activityIntent.putExtra("openFragment",FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor());
+        PendingIntent contentIntent = PendingIntent.getActivity(this,0,activityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Notification notification = new NotificationCompat.Builder(this, NotificationUtil.CHANNEL_COLOR_PICKER)
+                .setSmallIcon(R.mipmap.ic_launcher_color_you_foreground)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .setCategory(NotificationCompat.CATEGORY_SERVICE)
+                .setContentIntent(contentIntent)
+                .setOnlyAlertOnce(true)
+                .build();
+        notificationManager.notify(1,notification);
+    }
 
 
 }
