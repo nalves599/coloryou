@@ -9,7 +9,7 @@ public class NotificationUtil {
 
     public static final String CHANNEL_COLOR_PICKER= "colorPickerChannel";
 
-    private static void createNotificationChannels(Context context){
+    public static void createNotificationChannels(Context context){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel colorPickerChannel = new NotificationChannel(
                     CHANNEL_COLOR_PICKER,

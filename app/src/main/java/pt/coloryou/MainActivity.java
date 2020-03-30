@@ -203,6 +203,8 @@ public class MainActivity extends AppCompatActivity
         String title = "Color You!";
         String message = "A App que dá cor à tua vida!";
 
+        NotificationUtil.createNotificationChannels(getApplicationContext());
+
         Intent activityIntent = new Intent(this,MainActivity.class);
         activityIntent.putExtra("openFragment",FragmentsEnum.COLOR_PICKER_FRAGMENT.getValor());
         PendingIntent contentIntent = PendingIntent.getActivity(this,0,activityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
