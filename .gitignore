@@ -11,5 +11,13 @@
 /build
 /captures
 .externalNativeBuild
+<<<<<<< Updated upstream
 /app/debug/
 /app/release/
+
+=======
+
+
+app/debug/
+app/release/
+>>>>>>> Stashed changes
